@@ -4,24 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Anybody:wght@100;200;300&family=Bebas+Neue&family=Inter&family=Roboto+Slab&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/tailwind.css">
     <title>Document</title>
 </head>
 <body>
-    <section id="navbar" class="absolute w-full">
+    <section id="navbar" class="absolute w-full border-b-2 border-stone-200">
         <div class="container flex items-center pt-[15px] pb-[22px]">
             <div class="flex justify-center content-center mr-20">
                 <img src="./css/assets/logo.png" alt="Logo">
             </div>
             <div>
                 <ul class="flex gap-8 mr-[379px]">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Community</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Event</a></li>
+                    <li class="hover:font-bold active:scale-95 duration-150"><a href="#">Home</a></li>
+                    <div class="flex items-center gap-2 hover:font-bold active:scale-95 duration-150">
+                        <li><a href="#">Community</a></li>
+                        <img src="./css/assets/Vector.png" alt="">
+                    </div>
+                    <li class="hover:font-bold active:scale-95 duration-150"><a href="#">Blog</a></li>
+                    <li class="hover:font-bold active:scale-95 duration-150"><a href="#">Event</a></li>
                 </ul>
             </div>
-            <div class="flex justify-between">
+            <div class="flex gap-2">
                 <img src="./css/assets/magnifying-glass-solid.svg" alt="icon" class="w-[14px] mr-2">
                 <input type="text" placeholder="Seacrh here..." class="bg-transparent outline-none">
             </div>
@@ -30,11 +34,11 @@
             </div>
         </div>
     </section>
-    <section id="Home" class="bg-home-bg max h-screen">
+    <section id="Home" class="bg-home-bg pb-10">
         <div class="container columns-2 mx-auto flex items-center justify-between">
             <div class="w-[500px] mt-[125px]">
                 <div class="mx-auto">
-                    <p class="bg-cyan-300 rounded-lg w-[180px] flex justify-center items-center text-blue-500 px-[30px] py-[12px] text-[12px] mb-[20px]">NeteBook Community</p>
+                    <p class="bg-cyan-300 rounded-lg w-[184px] flex justify-center items-center text-blue-500 px-[30px] py-[12px] text-[12px] mb-[20px]">NeteBook Community</p>
                     <h1 class="text-[56px] leading-[66px] font-[700] text-[#0A093D] mb-[18px]">Your Solution For Community!</h1>
                     <p class="text-[18px] leading-[28px] font-[400] text-[#656464] mb-[42px]">More than 2 billion people in over countries use socibook to stay in touch with friends & family.</p>
                 </div>
@@ -73,7 +77,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="flex gap-6">
+            <div class="flex gap-6 hover:flex-row-reverse hover:duration-200 hover:ease-in-out cursor-pointer">
                 <img src="./css/assets/video.svg" alt="video">
                 <div class="flex flex-col gap-6">
                     <img src="./css/assets/laptop.svg" alt="Kerja" class="mt-[34px]">
@@ -203,11 +207,9 @@
                 <h1 class="font-[700] text-[36px] leading-[36px] text-[#0A093D] mb-[19px]">Our Active Member</h1>
                 <p class="font-[400] text-[16px] leading-[28px] text-[#656464] mb-[38px]">when an unknown printer took a galley of type and meeting fari scrambled it.</p>
                 <div class="flex justify-between items-center bg-[#217BF4]/20 rounded-[14px] w-[474px] p-2 mb-[44px]">
-                    <p class="font-[500] text-[16px] leading-[16px] text-[#2F2C4A] opacity-80 ml-[58px] mr-[98px] hover:font-bold duration-150 cursor-pointer">Newst</p>
-                    <p class="font-[500] text-[16px] leading-[16px] text-[#2F2C4A] opacity-80">Populer</p>
-                    <div class="bg-[#217BF4] py-[20px] px-[50px] rounded-[14px] flex justify-center items-center text-center w-[151px] ml-[50px]">
-                        <p class="font-[600] text leading-[16px] text-[#FFFFFF]">Active</p>
-                    </div>
+                    <button class="font-[500] text-[16px] leading-[16px] text-[#2F2C4A] opacity-80 py-5 px-[50px] hover:underline focus:bg-[#217BF4] focus:text-white focus:rounded-[14px] focus:no-underline">Newst</button>
+                    <button class="font-[500] text-[16px] leading-[16px] text-[#2F2C4A] opacity-80 py-5 px-[50px] hover:underline focus:bg-[#217BF4] focus:text-white focus:rounded-[14px] focus:no-underline">Populer</button>
+                    <button class="font-[500] text-[16px] leading-[16px] text-[#2F2C4A] opacity-80 py-5 px-[50px] hover:underline focus:bg-[#217BF4] focus:text-white focus:rounded-[14px] focus:no-underline">Active</button>
                 </div>
             </div>
         </div>
@@ -261,7 +263,7 @@
             </div>
             <div class="flex justify-between gap-[75px] columns-3">
                 <div class="w-fit">
-                    <img src="./css/assets/macbook.svg" alt="maccbook" class=" mb-[25px]">
+                    <img src="./css/assets/macbook.svg" alt="maccbook" class=" mb-[25px] hover:rotate-3 hover:scale-110 duration-200">
                     <div class="flex gap-4 columns-2">
                         <div class="border-t-4 border-yellow-600 w-12 float-left mt-6"></div>
                             <div class="flex flex-col">
@@ -287,7 +289,7 @@
                     </div>
                 </div>
                 <div class="w-fit">
-                    <img src="./css/assets/mainan.svg" alt="mainan" class=" mb-[25px]">
+                    <img src="./css/assets/mainan.svg" alt="mainan" class=" mb-[25px] hover:rotate-3 hover:scale-110 duration-200">
                     <div class="flex gap-4 columns-2">
                         <div class="border-t-4 border-yellow-600 w-12 float-left mt-6"></div>
                         <div class="flex flex-col">
@@ -345,9 +347,9 @@
             <div class="flex flex-col w-[339px]">
                 <h1 class="font-[500] text-[20px] leading-[32px] mb-[18px] text-[#FFFFFF]">Subscribe Cirkle Newsletter</h1>
                 <p class="font-[400] text-[16px] leading-[28px] text-[#E7E7E7] mb-[32px]">Subscribe to be the first one to know about updates. Enter your email</p>
-                <div class="flex pl-[24px] border-2 border-[rgba(255,255,255,0.85)] rounded-[12px]">
+                <div class="flex pl-[24px] border-2 border-[rgba(255,255,255,0.85)] rounded-[12px] w-fit">
                     <input type="text" placeholder="Email Address" class="bg-transparent outline-none">
-                    <div class="bg-[#FFFFFF] rounded-[12px] py-[16px] px-[24px] text-[#2B2B39] font-[500] text-center w-full hover:cursor-pointer active:scale-90">
+                    <div class="bg-[#FFFFFF] rounded-[12px] w-full py-[16px] px-[26px] text-[#2B2B39] font-[500] text-center hover:cursor-pointer active:scale-90">
                         Subscribe
                     </div>
                 </div>
