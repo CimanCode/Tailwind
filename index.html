@@ -5,62 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Anybody:wght@100;200;300&family=Bebas+Neue&family=Inter&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css" />
     <link rel="stylesheet" href="./css/tailwind.css">
-    <title>Document</title>
+    <title>NetBook</title>
 </head>
 <body>
-    <section id="navbar" class="absolute w-full border-b-2 border-stone-200">
-        <div class="container flex items-center pt-[15px] pb-[22px]">
-            <div class="flex justify-center content-center mr-20">
+    <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
+    <nav id="navbar" class="fixed w-full border-b-2 border-stone-200">
+        <div class="container mx-auto px-6 md:px-6 lg:px-0 flex flex-wrap lg:flex-nowrap justify-between items-center pt-[15px] pb-[22px] gap-8">
+            <div class="flex justify-center content-center">
                 <img src="./css/assets/logo.png" alt="Logo">
             </div>
-            <div>
-                <ul class="flex gap-8 mr-[379px]">
-                    <li class="hover:font-bold active:scale-95 duration-150"><a href="#">Home</a></li>
-                    <div class="flex items-center gap-2 hover:font-bold active:scale-95 duration-150">
-                        <li><a href="#">Community</a></li>
-                        <img src="./css/assets/Vector.png" alt="">
+            <button data-collapse-toggle="navbar-defaults" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-defaults" aria-expanded="false">
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+            </button>
+            <div id="navbar-defaults" class="hidden lg:block w-full bg-white/20 lg:bg-transparent">
+                <div class="flex flex-col md:flex-row text-center mx-auto justify-between items-center gap-5">
+                    <ul class="flex flex-col md:flex-row gap-8">
+                        <li class="hover:font-bold active:scale-95 duration-150"><a href="#">Home</a></li>
+                        <div class="flex items-center gap-2 hover:font-bold active:scale-95 duration-150">
+                            <li><a href="#">Community</a></li>
+                            <img src="./css/assets/Vector.png" alt="">
+                        </div>
+                        <li class="hover:font-bold active:scale-95 duration-150"><a href="#">Blog</a></li>
+                        <li class="hover:font-bold active:scale-95 duration-150"><a href="#">Event</a></li>
+                    </ul>
+                    <div class="flex md:flex-row gap-2 w-fit">
+                        <img src="./css/assets/magnifying-glass-solid.svg" alt="icon" class="w-[14px] mr-2">
+                        <input type="text" placeholder="Seacrh here..." class="bg-transparent border-none outline-none w-40">
+                        <div class="bg-blue-600 p-2 rounded-md flex justify-center w-32 text-white hover:cursor-pointer active:scale-90">
+                            Login
+                        </div>
                     </div>
-                    <li class="hover:font-bold active:scale-95 duration-150"><a href="#">Blog</a></li>
-                    <li class="hover:font-bold active:scale-95 duration-150"><a href="#">Event</a></li>
-                </ul>
-            </div>
-            <div class="flex gap-2">
-                <img src="./css/assets/magnifying-glass-solid.svg" alt="icon" class="w-[14px] mr-2">
-                <input type="text" placeholder="Seacrh here..." class="bg-transparent outline-none">
-            </div>
-            <div class="bg-blue-600 p-2 rounded-md w-28 flex content-center justify-center text-white hover:cursor-pointer active:scale-90">
-                Login
+                </div>
             </div>
         </div>
-    </section>
+    </nav>
     <section id="Home" class="bg-home-bg pb-10">
-        <div class="container columns-2 mx-auto flex items-center justify-between">
-            <div class="w-[500px] mt-[125px]">
-                <div class="mx-auto">
+        <div class="container lg:columns-2 md:columns-2 px-6 lg:px-0 md:flex-nowrap mx-auto flex justify-center flex-wrap flex-wrap-reverse items-center gap-5 lg:justify-between lg:text-start ">
+            <div class="w-[500px] mt-6 lg:mt-[125px] md:mt-[125px]">
+                <div class="mx-auto flex flex-col lg:text-start lg:items-start md:text-start md:items-start sm:text-center sm:items-center">
                     <p class="bg-cyan-300 rounded-lg w-[184px] flex justify-center items-center text-blue-500 px-[30px] py-[12px] text-[12px] mb-[20px]">NeteBook Community</p>
-                    <h1 class="text-[56px] leading-[66px] font-[700] text-[#0A093D] mb-[18px]">Your Solution For Community!</h1>
+                    <h1 class="text-[35px] lg:text-[56px] md:text-[45px] sm:text-[30px] leading-[66px] font-[700] text-[#0A093D] mb-[18px]">Your Solution For Community!</h1>
                     <p class="text-[18px] leading-[28px] font-[400] text-[#656464] mb-[42px]">More than 2 billion people in over countries use socibook to stay in touch with friends & family.</p>
                 </div>
-                <div class="flex gap-[18px]">
-                    <div class="bg-cyan-600 flex justify-center items-center px-[42px] py-[24px] rounded-xl w-[162px] hover:cursor-pointer active:scale-90">
+                <div class="flex lg:justify-start md:justify-start sm:justify-center gap-[18px]">
+                    <div class="bg-cyan-600 flex justify-center items-center py-[16px] px-[21px] lg:px-[42px] lg:py-[24px] rounded-xl hover:cursor-pointer active:scale-90">
                         <p class="text-[14px] font-[400] text-white">About More</p>
                     </div>
-                    <div class="flex justify-center items-center py-[24px] px-[42px] rounded-xl border border-[#217BF4] hover:cursor-pointer active:scale-90">
+                    <div class="flex justify-center items-center py-[16px] px-[21px] lg:py-[24px] lg:px-[42px] rounded-xl border border-[#217BF4] hover:cursor-pointer active:scale-90">
                         <p class="text-[14px] font-[400] text-[#217BF4]">Invite Friend</p>
                     </div>
                 </div>
             </div>
              <div class="mt-[72px]">
-                <img src="./css/assets/Iamge.png" alt="image">
+                <img src="./css/assets/Iamge.png" alt="image" class="w-[350px] lg:w-full md:w-[500px]">
              </div>
         </div>
     </section>
     <section id="netboks">
-        <div class="container columns-2 mx-auto flex item center justify-between mt-[96px]">
-            <div class="mt-[97px] w-[406px]">
+        <div class="container lg:columns-2 mx-auto flex flex-wrap lg:flex-nowrap flex-wrap-reverse sm:flex-nowrap sm:items-start sm:justify-start item-center justify-center lg:justify-between lg:mt-[96px] md:mt-[96px]">
+            <div class="lg:mt-[97px] w-[406px] sm:py-12 sm:mt-[35px] px-6 lg:px-0">
                 <p class="font-[500] text-[18px] text-[#217BF4] leading-[18px] mb-[10px]">What Netboks?</p>
-                <h1 class="font-[700] text-[36px] text-[#0A093D] leading-[48px] mb-[16px]">Why Join To Netbook Social Network ?</h1>
+                <h1 class="font-[700] sm:text-[28px] text-[36px] text-[#0A093D] leading-[48px] mb-[16px]">Why Join To Netbook Social Network ?</h1>
                 <p class="font-[400] text-[#656464] text-[16px] leading-[28px] mb-[36px]">Recent surveys have indicated that small businesses recognise the need they have to connect with consumer.</p>
                 <ul>
                     <li class="flex flex-row gap-3 font-[500] text-[18px] leading-[18px] mb-[16px]">
@@ -77,24 +84,26 @@
                     </li>
                 </ul>
             </div>
-            <div class="flex gap-6 hover:flex-row-reverse hover:duration-200 hover:ease-in-out cursor-pointer">
-                <img src="./css/assets/video.svg" alt="video">
-                <div class="flex flex-col gap-6">
-                    <img src="./css/assets/laptop.svg" alt="Kerja" class="mt-[34px]">
-                    <img src="./css/assets/jaringan.svg" alt="jaringan" class="mb-[34px]">
+            <div class="flex gap-6 sm:mt-[80px]">
+                <img src="./css/assets/video.svg" alt="video" class="w-40 sm:w-36 lg:w-fit">
+                <div class="flex flex-col gap-6 lg:mt-[60px]">
+                    <img src="./css/assets/laptop.svg" alt="Kerja" class="mt-[34px] w-40 sm:w-40 lg:w-fit lg:mt-0">
+                    <img src="./css/assets/jaringan.svg" alt="jaringan" class="mb-[34px] w-40 sm:w-40 lg:w-fit lg:mt-0">
                 </div>
             </div>
         </div>
     </section>
     <section id="rewards">
-        <div class="container columns-3 mx-auto flex justify-between items-center py-[75px]">
-            <div class="flex flex-col bg-[#FFFFFF] shadow-xl w-[336px] p-[40px] justify-start border rounded-xl">
+        <div class="container lg:columns-3 mx-auto flex justify-center flex-wrap-reverse sm:flex sm:flex-wrap sm:justify-between md:flex md:flex-wrap md:gap-6 lg:justify-between md:justify-between px-6 lg:px-0 items-center py-[75px]">
+            <div class="flex flex-col mb-8 lg:mb-0 bg-[#FFFFFF] shadow-xl lg:w-[336px] md:w-[336px] sm:w-[285px] p-[40px] justify-start rounded-xl">
                 <div class="flex gap-2 items-center mb-[20px]">
                     <img src="./css/assets/Star.svg" alt="star">
                     <p class="font-[500] text-[18px] leading-[18px] text-[#0A093D] ">4.8 Rating</p>
                 </div>
                 <div class="flex items-center gap-2 mb-[20px]">
-                    <img src="./css/assets/people.png" alt="people">
+                    <img src="./css/assets/fakhri.jpg" alt="" class="w-6 h-6 rounded-full border border-stone-100">
+                    <img src="./css/assets/nando.jpg" alt="" class="w-6 h-6 rounded-full border border-stone-100 -translate-x-4">
+                    <img src="./css/assets/dafuk.jpg" alt="" class="w-6 h-6 rounded-full border border-stone-100 -translate-x-8">
                     <p class="font-[600] text-[16px] leading-[18px] text-[#217BF4]">+836k</p>
                     <p class="font-[500] text-[16px] leading-[18px] text-[#5D5B70]">Members</p>
                 </div>
@@ -106,8 +115,8 @@
                     <img src="./css/assets/ArrowRightBlue.svg" alt="Panah">
                 </div>
             </div>
-            <div class="flex flex-col bg-[#FFFFFF] shadow-xl w-[336px] p-[40px] justify-start rounded-xl">
-                <div class="flex gap-2 items-center mb-[20px]">
+            <div class="flex flex-col bg-[#FFFFFF] shadow-xl lg:w-[336px] md:w-[336px] sm:w-[285px] p-[40px] justify-start rounded-xl mb-8 lg:mb-0">
+                <div class="flex gap-2 items-center sm:mb-[12px] mb-[20px]">
                     <img src="./css/assets/Trophy.svg" alt="star">
                     <p class="font-[500] text-[18px] leading-[18px] text-[#0A093D] ">Awwards</p>
                 </div>
@@ -123,9 +132,9 @@
                     <img src="./css/assets/ArrowRighBrow.svg" alt="Panah">
                 </div>
             </div>
-            <div class="flex flex-col w-[381px]">
+            <div class="flex lg:text-start sm:w-full md:text-center md:ml-44 lg:ml-0 lg:items-start md:items-center flex-col lg:w-[381px] md:w-[381px] mb-8 lg:mb-0">
                 <p class="font-[500] text-[18px] leading-[18px] text-[#217BF4] mb-[10px]">Our Achivment</p>
-                <h1 class="font-[700] text-[36px] leading-[48px] text-[#0A093D] mb-[18px]">We are Connecting You The Digital Life.</h1>
+                <h1 class="font-[700] sm:text-[28px] lg:text-[36px] md:text-[36px] leading-[48px] text-[#0A093D] mb-[18px]">We are Connecting You The Digital Life.</h1>
                 <p class="font-[400] text-[16px] leading-[28px] text-[#656464] mb-[38px]">The scope the Social Media becomes crucial Is helps the business to directly engage with their needs and wants.</p>
                 <div class="flex item-center text-center justify-center p-[22px] gap-2 w-[192px] bg-[#217BF4] shadow-lg rounded-xl hover:cursor-pointer active:scale-90">
                     <p class="text-[14px] leading-[14px] font-[500] text-[#FFFFFF]">Discover Me</p>
@@ -135,64 +144,64 @@
         </div>
     </section>
     <section id="community" class="bg-community-bg">
-        <div class="container mx-auto flex justify-center text-center items-center">
+        <div class="container mx-auto px-6 lg:px-0 flex justify-center text-center items-center">
             <div class="flex flex-col w-[441px] mt-[60px] mb-[64px]">
                 <p class="font-[500] text-[18px] leading-[18px] text-[#217BF4] mb-[9px]">Our Community</p>
                 <h1 class="font-[700] text-[36px] leading-[36px] text-[#0A093D] mb-[19px]">Community Main Feature</h1>
                 <p class="font-[400] text-[16px] leading-[28px] text-[#656464]">The wise man therefore always holds in these matters to this principle of selection.</p>
             </div>
         </div>
-        <div class="container mx-auto flex justify-center flex-wrap gap-11 columns-2 mb-[80px]">
-            <div class="flex gap-6 bg-[#FFFFFF] shadow-xl rounded-[14px] w-[522px]">
-                <div class="bg-member-bg rounded-[24px] shadow-xl px-[16px] py-[19px] w-[66px] h-[66px] mt-[40px] mb-[75px] ml-[40px] flex justify-center items-center">
+        <div class="container mx-auto flex justify-center flex-wrap gap-11 px-6 lg:px-0 lg:columns-2 mb-[80px]">
+            <div class="flex items-center lg:justify-start lg:items-start px-2 lg:px-0 pt-6 lg:pt-0 flex-col lg:flex-row lg:gap-6 bg-[#FFFFFF] shadow-xl rounded-[14px] lg:w-[522px]">
+                <div class="bg-member-bg rounded-[24px] shadow-xl px-[16px] py-[19px] w-[66px] h-[66px] lg:mt-[40px] lg:mb-[75px] lg:ml-[40px] flex justify-center items-center mb-4">
                     <img src="./css/assets/Member.svg" alt="Member">
                 </div>
-                <div class="flex flex-col mt-[46px] mb-[44px] mr-[65px]">
-                    <h1 class="font-[600] text-[24px] leading-[26px] text-[#2F2C4A] mb-[14px]">Members, Friend</h1>
+                <div class="flex items-center text-center lg:items-start lg:text-start flex-col mb-6 lg:mt-[46px] lg:mb-[44px] lg:mr-[65px]">
+                    <h1 class="font-[600] text-[24px] leading-[26px] text-[#2F2C4A] mb-[14px]">Members, Friends</h1>
                     <p class="font-[400] text-[16px] leading-[26px] text-[#656464] w-[315px]">Members, Friends Connection ( like followers ), Private Message</p>
                 </div>
             </div>
-            <div class="flex gap-6 bg-[#FFFFFF] shadow-xl rounded-[14px] w-[522px]">
-                <div class="bg-yellow-bg rounded-[24px] shadow-xl px-[16px] py-[19px] w-[66px] h-[66px] mt-[40px] mb-[75px] ml-[40px] flex justify-center items-center">
+            <div class="flex items-center lg:justify-start lg:items-start px-2 lg:px-0  pt-6 lg:pt-0 flex-col lg:flex-row lg:gap-6 bg-[#FFFFFF] shadow-xl rounded-[14px] lg:w-[522px]">
+                <div class="bg-yellow-bg rounded-[24px] shadow-xl px-[16px] py-[19px] w-[66px] h-[66px] lg:mt-[40px] lg:mb-[75px] lg:ml-[40px] flex justify-center items-center mb-4">
                     <img src="./css/assets/Forum.svg" alt="Member">
                 </div>
-                <div class="flex flex-col mt-[46px] mb-[44px] mr-[65px]">
+                <div class="flex items-center text-center lg:items-start lg:text-start flex-col mb-6 lg:mt-[46px] lg:mb-[44px] lg:mr-[65px]">
                     <h1 class="font-[600] text-[24px] leading-[26px] text-[#2F2C4A] mb-[14px]">Forum</h1>
                     <p class="font-[400] text-[16px] leading-[26px] text-[#656464] w-[315px]">Forum is ready by BBPress. Your users can make topics and talk.</p>
                 </div>
             </div>
-            <div class="flex gap-6 bg-[#FFFFFF] shadow-xl rounded-[14px] w-[522px]">
-                <div class="bg-red-bg rounded-[24px] shadow-xl px-[16px] py-[19px] w-[66px] h-[66px] mt-[40px] mb-[75px] ml-[40px] flex justify-center items-center">
+            <div class="flex items-center lg:justify-start lg:items-start px-2 lg:px-0  pt-6 lg:pt-0 flex-col lg:flex-row lg:gap-6 bg-[#FFFFFF] shadow-xl rounded-[14px] lg:w-[522px]">
+                <div class="bg-red-bg rounded-[24px] shadow-xl px-[16px] py-[19px] w-[66px] h-[66px] lg:mt-[40px] lg:mb-[75px] lg:ml-[40px] flex justify-center items-center mb-4">
                     <img src="./css/assets/List.svg" alt="Member">
                 </div>
-                <div class="flex flex-col mt-[46px] mb-[44px] mr-[65px]">
+                <div class="flex items-center text-center lg:text-start lg:items-start mb-6 flex-col lg:mt-[46px] lg:mb-[44px] lg:mr-[65px]">
                     <h1 class="font-[600] text-[24px] leading-[26px] text-[#2F2C4A] mb-[14px]">List Builder</h1>
                     <p class="font-[400] text-[16px] leading-[26px] text-[#656464] w-[315px]">Members, Groups list can be modified by drag & drop live builder.</p>
                 </div>
             </div>
-            <div class="flex gap-6 bg-[#FFFFFF] shadow-xl rounded-[14px] w-[522px]">
-                <div class="bg-red-bg rounded-[24px] shadow-xl px-[16px] py-[19px] w-[66px] h-[66px] mt-[40px] mb-[75px] ml-[40px] flex justify-center items-center">
+            <div class="flex items-center lg:items-start px-2 lg:px-0  pt-6 lg:pt-0 flex-col lg:flex-row lg:gap-6 bg-[#FFFFFF] shadow-xl rounded-[14px] lg:w-[522px]">
+                <div class="bg-red-bg rounded-[24px] shadow-xl px-[16px] py-[19px] w-[66px] h-[66px] lg:mt-[40px] lg:mb-[75px] lg:ml-[40px] flex justify-center items-center mb-4">
                     <img src="./css/assets/Group.svg" alt="Member">
                 </div>
-                <div class="flex flex-col mt-[46px] mb-[44px] mr-[65px]">
+                <div class="flex items-center text-center lg:items-start lg:text-start mb-6 flex-col lg:mt-[46px] lg:mb-[44px] lg:mr-[65px]">
                     <h1 class="font-[600] text-[24px] leading-[26px] text-[#2F2C4A] mb-[14px]">Groups</h1>
                     <p class="font-[400] text-[16px] leading-[26px] text-[#656464] w-[315px]">Your users can create groups to let other users to join and talk</p>
                 </div>
             </div>
-            <div class="flex gap-6 bg-[#FFFFFF] shadow-xl rounded-[14px] w-[522px]">
-                <div class="bg-member-bg rounded-[24px] shadow-xl px-[16px] py-[19px] w-[66px] h-[66px] mt-[40px] mb-[75px] ml-[40px] flex justify-center items-center">
+            <div class="flex items-center lg:items-start px-2 lg:px-0  pt-6 lg:pt-0 flex-col lg:flex-row lg:gap-6 bg-[#FFFFFF] shadow-xl rounded-[14px] lg:w-[522px]">
+                <div class="bg-member-bg rounded-[24px] shadow-xl px-[16px] py-[19px] w-[66px] h-[66px] lg:mt-[40px] lg:mb-[75px] lg:ml-[40px] flex justify-center items-center mb-4">
                     <img src="./css/assets/Custom.svg" alt="Member">
                 </div>
-                <div class="flex flex-col mt-[46px] mb-[44px] mr-[65px]">
+                <div class="flex items-center text-center lg:items-start lg:text-start mb-6 flex-col lg:mt-[46px] lg:mb-[44px] lg:mr-[65px]">
                     <h1 class="font-[600] text-[24px] leading-[26px] text-[#2F2C4A] mb-[14px]">Custom Module</h1>
                     <p class="font-[400] text-[16px] leading-[26px] text-[#656464] w-[315px]">You can create Members, Groups Module. We already created 3 modules. It's by drag & drop live builder.</p>
                 </div>
             </div>
-            <div class="flex gap-6 bg-[#FFFFFF] shadow-xl rounded-[14px] w-[522px]">
-                <div class="bg-yellow-bg rounded-[24px] shadow-xl px-[16px] py-[19px] w-[66px] h-[66px] mt-[40px] mb-[75px] ml-[40px] flex justify-center items-center">
+            <div class="flex items-center lg:items-start flex-col lg:flex-row px-2 lg:px-0 pt-6 lg:pt-0 lg:gap-6 bg-[#FFFFFF] shadow-xl rounded-[14px] lg:w-[522px]">
+                <div class="bg-yellow-bg rounded-[24px] shadow-xl px-[16px] py-[19px] w-[66px] h-[66px] lg:mt-[40px] lg:mb-[75px] lg:ml-[40px] flex justify-center items-center mb-4">
                     <img src="./css/assets/Scrole.svg" alt="Member">
                 </div>
-                <div class="flex flex-col mt-[46px] mb-[44px] mr-[65px]">
+                <div class="flex items-center text-center lg:items-start lg:text-start flex-col mb-6 lg:mt-[46px] lg:mb-[44px] lg:mr-[65px]">
                     <h1 class="font-[600] text-[24px] leading-[26px] text-[#2F2C4A] mb-[14px]">List Scroll Effects</h1>
                     <p class="font-[400] text-[16px] leading-[26px] text-[#656464] w-[315px]">8 different scroll effects are ready.
                         You can always change by your tastes.</p>
@@ -202,18 +211,18 @@
     </section>
     <section id="team">
         <div class="container mx-auto flex justify-center items-center text-center">
-            <div class="flex flex-col w-[454px]">
+            <div class="flex flex-col w-[454px] md:w-[474px] px-10 lg:px-0">
                 <p class="font-[500] text-[18px] leading-[18px] text-[#217BF4] mb-[10px]">Valuable team</p>
                 <h1 class="font-[700] text-[36px] leading-[36px] text-[#0A093D] mb-[19px]">Our Active Member</h1>
                 <p class="font-[400] text-[16px] leading-[28px] text-[#656464] mb-[38px]">when an unknown printer took a galley of type and meeting fari scrambled it.</p>
-                <div class="flex justify-between items-center bg-[#217BF4]/20 rounded-[14px] w-[474px] p-2 mb-[44px]">
-                    <button class="font-[500] text-[16px] leading-[16px] text-[#2F2C4A] opacity-80 py-5 px-[50px] hover:underline focus:bg-[#217BF4] focus:text-white focus:rounded-[14px] focus:no-underline">Newst</button>
-                    <button class="font-[500] text-[16px] leading-[16px] text-[#2F2C4A] opacity-80 py-5 px-[50px] hover:underline focus:bg-[#217BF4] focus:text-white focus:rounded-[14px] focus:no-underline">Populer</button>
-                    <button class="font-[500] text-[16px] leading-[16px] text-[#2F2C4A] opacity-80 py-5 px-[50px] hover:underline focus:bg-[#217BF4] focus:text-white focus:rounded-[14px] focus:no-underline">Active</button>
+                <div class="flex flex-col md:flex-row sm:flex-row lg:flex-row lg:justify-between lg:items-center bg-[#217BF4]/20 rounded-[14px] sm:-ml-[48px] sm:w-auto md:w-auto w-fit mx-auto md:mx-auto lg:mx-auto lg:w-[474px] p-2 mb-[44px]">
+                    <button class="font-[500] text-[16px] leading-[16px] text-[#2F2C4A] opacity-80 py-5 px-[50px] md:px-[35px] sm:px[20px] hover:underline focus:bg-[#217BF4] focus:text-white focus:rounded-[14px] focus:no-underline md:w-auto sm:w-auto">Newst</button>
+                    <button class="font-[500] text-[16px] leading-[16px] text-[#2F2C4A] opacity-80 py-5 px-[50px] md:px-[35px] sm:px[20px] hover:underline focus:bg-[#217BF4] focus:text-white focus:rounded-[14px] focus:no-underline md:w-auto sm:w-auto">Populer</button>
+                    <button class="font-[500] text-[16px] leading-[16px] text-[#2F2C4A] opacity-80 py-5 px-[50px] md:px-[35px] sm:px[20px] hover:underline focus:bg-[#217BF4] focus:text-white focus:rounded-[14px] focus:no-underline md:w-auto sm:w-auto">Active</button>
                 </div>
             </div>
         </div>
-        <div class="container mx-auto flex gap-8 columns-4">
+        <div class="container mx-auto flex justify-center lg:justify-start flex-wrap lg:flex-nowrap gap-8 px-6 lg:px-0 lg:columns-4">
             <div class="bg-[#FFFFFF] rounded-[14px] shadow-xl flex flex-col justify-center items-center px-[30px] py-[52px] w-[270px]
             border border-transparent hover:scale-110 ease-in-out hover:border-sky-200 hover:duration-150 cursor-pointer">
                 <img src="./css/assets/Abstrack.png" alt="Abstrack" class="mb-[26px] bg-no-repeat bg-fahmi-img bg-center">
@@ -241,18 +250,18 @@
         </div>
     </section>
     <section id="mobile" class="bg-[#E5F0FD] mt-[135px] mb-[91px]">
-        <div class="container mx-auto flex justify-between columns-2">
-            <div class=" flex flex-col w-[351px] mt-[117px]">
+        <div class="container mx-auto flex flex-wrap md:flex-nowrap sm:flex-nowrap lg:flex-nowrap justify-between lg:columns-2">
+            <div class=" flex flex-col px-8 lg:px-0 w-[351px] mt-8 lg:mt-[117px] md:my-12 sm:my-12">
                 <p class="font-[500] text-[18px] leading-[18px] text-[#217BF4] mb-[10px]">Get Our Application</p>
                 <h1 class="font-[700] text-[36px] leading-[52px] text-[#0A093D] mb-[18px]">You Can Easily Find 
                     This App…!</h1>
                 <p class="font-[400] text-[16px] leading-[26px] text-[#656464]">I say chap that’s suing lavatory chip shop gosh off his smashing boot are you taking the piss posh loo brilliant.</p>
                 <div class="flex gap-2 mt-[36px]">
-                    <img src="./css/assets/apstore.png" alt="appstore">
-                    <img src="./css/assets/playstore.svg" alt="playstore">
+                    <img src="./css/assets/apstore.png" alt="appstore" class="sm:w-24 lg:w-full">
+                    <img src="./css/assets/playstore.svg" alt="playstore" class="sm:w-24 lg:w-full">
                 </div>
             </div>
-            <img src="./css/assets/samrt.png" alt="mobile">
+            <img src="./css/assets/samrt.png" alt="mobile" class="md:w-72 sm:w-64 lg:w-auto">
         </div>
     </section>
     <section id="application">
@@ -261,26 +270,26 @@
                 <p class="font-[500] text-[18px] leading-[18px] text-[#217BF4] mb-[10px]">Get Our Application</p>
                 <h1 class="font-[700] text-[36px] leading-[36px] text-[#0A093D] mb-[80px]">Latest News</h1>
             </div>
-            <div class="flex justify-between gap-[75px] columns-3">
-                <div class="w-fit">
-                    <img src="./css/assets/macbook.svg" alt="maccbook" class=" mb-[25px] hover:rotate-3 hover:scale-110 duration-200">
-                    <div class="flex gap-4 columns-2">
-                        <div class="border-t-4 border-yellow-600 w-12 float-left mt-6"></div>
-                            <div class="flex flex-col">
-                            <p class="font-[600] text-[20px] leading-[32px] text-[#2F2C4A] mb-[24px]">It Does Not Matter Hows Slowly go as Long</p>
-                            <div class="flex items-center text-center gap-2 hover:font-bold cursor-pointer">
-                            <p class="font text text-[#656464]">Continue Reading</p>
-                            <img src="./css/assets/ArrowRighBrow.svg" alt="panah">
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                <div class="w-fit">
-                    <img src="./css/assets/bocil.svg" alt="bocil" class=" mb-[25px] hover:rotate-3 hover:scale-110 duration-200">
+            <div class="flex justify-center flex-wrap lg:flex-nowrap lg:justify-between px-6 lg:px-0 lg:gap-[75px] lg:columns-3">
+                <div class="w-fit h-fit flex gap-2 lg:flex-col lg:gap-0">
+                    <img src="./css/assets/macbook.svg" alt="maccbook" class=" w-28 h-28 md:w-52 md:h-52 lg:w-full lg:h-full mb-[25px] hover:rotate-3 hover:scale-110 duration-200">
                     <div class="flex gap-4 columns-2">
                         <div class="border-t-4 border-yellow-600 w-12 float-left mt-6"></div>
                         <div class="flex flex-col">
-                            <p class="font-[600] text-[20px] leading-[32px] text-[#2F2C4A] mb-[24px]">Netbook Network Added New Photo Filter</p>
+                            <p class="font-[600] text-[20px] leading-[32px] text-[#2F2C4A] lg:mb-[24px]">It Does Not Matter Hows Slowly go as Long</p>
+                            <div class="flex items-center text-center gap-2 hover:font-bold cursor-pointer">
+                                <p class="font text text-[#656464]">Continue Reading</p>
+                                <img src="./css/assets/ArrowRighBrow.svg" alt="panah">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-fit h-fit flex gap-2 lg:flex-col lg:gap-0">
+                    <img src="./css/assets/bocil.svg" alt="bocil" class=" w-28 h-28 md:w-52 md:h-52 lg:w-full lg:h-full mb-[25px] hover:rotate-3 hover:scale-110 duration-200">
+                    <div class="flex gap-4 columns-2">
+                        <div class="border-t-4 border-yellow-600 w-12 float-left mt-6"></div>
+                        <div class="flex flex-col">
+                            <p class="font-[600] text-[20px] leading-[32px] text-[#2F2C4A] lg:mb-[24px]">Netbook Network Added New Photo Filter</p>
                             <div class="flex items-center text-center gap-2 hover:font-bold cursor-pointer">
                             <p class="font text text-[#217BF4]">Continue Reading</p>
                             <img src="./css/assets/ArrowRightBlue.svg" alt="panah">
@@ -288,12 +297,12 @@
                     </div>
                     </div>
                 </div>
-                <div class="w-fit">
-                    <img src="./css/assets/mainan.svg" alt="mainan" class=" mb-[25px] hover:rotate-3 hover:scale-110 duration-200">
+                <div class="w-fit h-fit flex gap-2 lg:flex-col lg:gap-0">
+                    <img src="./css/assets/mainan.svg" alt="mainan" class=" w-28 h-28 md:w-52 md:h-52 lg:w-full lg:h-full mb-[25px] hover:rotate-3 hover:scale-110 duration-200">
                     <div class="flex gap-4 columns-2">
                         <div class="border-t-4 border-yellow-600 w-12 float-left mt-6"></div>
                         <div class="flex flex-col">
-                            <p class="font-[600] text-[20px] leading-[32px] text-[#2F2C4A] mb-[24px]">We Optimised Netbooks Better Navigation</p>
+                            <p class="font-[600] text-[20px] leading-[32px] text-[#2F2C4A] lg:mb-[24px]">We Optimised Netbooks Better Navigation</p>
                             <div class="flex items-center gap-2 hover:font-bold cursor-pointer">
                             <p class="font text text-[#656464]">Continue Reading</p>
                             <img src="./css/assets/ArrowRighBrow.svg" alt="panah" class="pt-0">
@@ -305,8 +314,8 @@
         </div>
     </section>
     <section id="footer" class="bg-[rgba(43,43,57,1)]">
-        <div class="container flex mx-auto pt-[78px] pb-[80px]">
-            <div class="w-[668px] flex justify-between mr-[163px]">
+        <div class="container flex flex-wrap lg:flex-nowrap mx-auto pt-[78px] pb-[80px]">
+            <div class="w-[668px] flex flex-wrap lg:flex-nowrap md:flex-nowrap sm:flex-nowrap justify-between sm:gap-6 md:gap-0 md:justify-between md:ml-12 gap-20 px-6 mb-10 lg:mb-0 lg:px-0 lg:gap-0 items-center lg:justify-between lg:mr-[163px]">
                 <div>
                     <p class="font-[500] text-[20px] leading-[20px] text-[#FFFFFF] mb-[22px]">Home</p>
                     <ul>
@@ -344,20 +353,20 @@
                     </ul>
                 </div>
             </div>
-            <div class="flex flex-col w-[339px]">
+            <div class="flex px-6 lg:px-0 items-center text-center sm:ml-36 md:ml-48 lg:ml-0 lg:items-start lg:text-start lg:justify-start flex-col lg:w-[339px] md:w-[400px] sm:w-[350px] w-full">
                 <h1 class="font-[500] text-[20px] leading-[32px] mb-[18px] text-[#FFFFFF]">Subscribe Cirkle Newsletter</h1>
                 <p class="font-[400] text-[16px] leading-[28px] text-[#E7E7E7] mb-[32px]">Subscribe to be the first one to know about updates. Enter your email</p>
-                <div class="flex pl-[24px] border-2 border-[rgba(255,255,255,0.85)] rounded-[12px] w-fit">
-                    <input type="text" placeholder="Email Address" class="bg-transparent outline-none">
-                    <div class="bg-[#FFFFFF] rounded-[12px] w-full py-[16px] px-[26px] text-[#2B2B39] font-[500] text-center hover:cursor-pointer active:scale-90">
+                <div class="flex border-2 border-[rgba(255,255,255,0.85)] rounded-[12px] w-full">
+                    <input type="text" placeholder="Email Address" class="bg-transparent outline-none w-full">
+                    <button class="bg-[#FFFFFF] rounded-[12px] py-[16px] w-fit px-[26px] text-[#2B2B39] font-[500] text-center hover:cursor-pointer active:scale-90">
                         Subscribe
-                    </div>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
     <section id="finish" class="bg-[#20202D]">
-        <div class="container mx-auto flex justify-between py-[41px]">
+        <div class="container mx-auto flex flex-col sm:flex-row md:flex-row lg:flex-nowrap px-6 lg:px-0 justify-between items-center text-center gap-4 py-[41px]">
             <p class="text-[#F6F6F6]">Besnik Creative Agency.</p>
             <div class="flex items-center gap-1">
                 <img src="./css/assets/logoNew.png" alt="logo">
@@ -379,5 +388,6 @@
             </div>
         </div>
     </section>
+    <!-- <script src="../path/to/flowbite/dist/flowbite.js"></script> -->
 </body>
 </html>

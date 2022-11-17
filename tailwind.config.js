@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./index.html'],
+  // content: ["./node_modules/flowbite/**/*.js"],
   theme: {
     container: {
       center: true,
@@ -18,9 +19,12 @@ module.exports = {
         'Masterio-img':"url('/css/assets/ali.png')",
         'Alia-img':"url('/css/assets/karon.png')",
         'yellow-bg':"linear-gradient(154.49deg, #FFD085 6.61%, #FFAF2E 89.72%)",
-        'red-bg':"linear-gradient(154.49deg, #FF858A 6.61%, #F04148 89.72%)"
+        'red-bg':"linear-gradient(154.49deg, #FF858A 6.61%, #F04148 89.72%)",
+        'abstrack':"url('/css/assets/Abstrack.png)"
       }
     },
   },
-  plugins: [],
+  plugins: [
+    // require('flowbite/plugin')
+  ],
 }
